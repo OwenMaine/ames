@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Ames Textile Inc.</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #8A2BE2, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn-gradient {
+             background: linear-gradient(90deg, #8A2BE2, #FF8C00);
+             transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+        }
+
+        .header {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .page-hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header -->
+    <header id="header" class="header fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Ames Textile Inc.</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-gray-600 hover:text-purple-600 transition">About</a>
+                <a href="#" class="text-purple-600 font-semibold transition">Services</a>
+                <a href="portfolio.html" class="text-gray-600 hover:text-purple-600 transition">Portfolio</a>
+                <a href="sustainability.html" class="text-gray-600 hover:text-purple-600 transition">Sustainability</a>
+                
+                
+            </nav>
+            <a href="#" class="hidden md:block btn-gradient text-white font-semibold px-6 py-3 rounded-lg shadow-md">
+                Create My Collection
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4 border-t border-gray-200">
+             <a href="#" class="block py-2 text-gray-600 hover:text-purple-600">About</a>
+             <a href="#" class="block py-2 text-purple-600 font-semibold">Services</a>
+             <a href="portfolio.html" class="block py-2 text-gray-600 hover:text-purple-600">Portfolio</a>
+             <a href="sustainability.html" class="block py-2 text-gray-600 hover:text-purple-600">Sustainability</a>
+             
+             
+             <a href="#" class="mt-4 block btn-gradient text-white font-semibold px-6 py-3 rounded-lg shadow-md text-center">Create My Collection</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero bg-gray-50" style="background-image: url('images/9.jpg');">
+             <div class="absolute inset-0 bg-black/50"></div>
+            <div class="container mx-auto px-6 text-center relative">
+                <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-extrabold text-white">Our Services</h1>
+                <p data-aos="fade-up" data-aos-delay="100" class="text-lg md:text-xl text-white mt-4 max-w-3xl mx-auto">End-to-end solutions for your fashion brand, from initial concept to final production.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 space-y-24">
+
+                <!-- Service 1: Design -->
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <img src="images/3.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x450/E0E0E0/B0B0B0?text=Ames+Textile+3';" alt="Fashion sketches and designs" class="rounded-2xl shadow-xl w-full h-auto object-cover">
+                    </div>
+                    <div data-aos="fade-left">
+                        <h2 class="text-4xl font-bold mb-4"><span class="gradient-text">Fashion Design & Tech Pack</span></h2>
+                        <p class="text-gray-600 mb-4">Our creative team can help you translate your ideas into professional fashion designs and detailed technical sketches. We create comprehensive tech packs that serve as the blueprint for manufacturing, ensuring accuracy and consistency.</p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>Mood boards and concept development.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>Detailed sketches and illustrations.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>Complete tech packs with measurements and material specs.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2: Sourcing -->
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                     <div data-aos="fade-right" class="md:order-2">
+                        <img src="images/4.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x450/DDE/AAA?text=Ames+Textile+4';" alt="Fabric sourcing" class="rounded-2xl shadow-xl w-full h-auto object-cover">
+                    </div>
+                    <div data-aos="fade-left" class="md:order-1">
+                        <h2 class="text-4xl font-bold mb-4"><span class="gradient-text">Material Sourcing</span></h2>
+                        <p class="text-gray-600 mb-4">Finding the right materials is crucial. Our dedicated sourcing team has an extensive network of suppliers, allowing us to find high-quality and sustainable fabrics, trims, and accessories that match your brand's aesthetic and values.</p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>Access to a wide range of conventional and sustainable materials.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>Supplier vetting and quality assurance.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>Sample procurement and testing.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3: Sampling -->
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <img src="images/5.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x450/DDD/BBB?text=Ames+Textile+5';" alt="Creating a clothing sample" class="rounded-2xl shadow-xl w-full h-auto object-cover">
+                    </div>
+                    <div data-aos="fade-left">
+                        <h2 class="text-4xl font-bold mb-4"><span class="gradient-text">Sampling & Prototyping</span></h2>
+                        <p class="text-gray-600 mb-4">Before full production, we create prototypes and samples for your approval. This critical step allows you to test the fit, feel, and overall quality of your design, ensuring the final product meets your exact specifications.</p>
+                         <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>First-fit prototypes to sales samples.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>Iterative refinement process based on your feedback.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>Pre-production samples for final approval.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <!-- Service 4: Production -->
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                     <div data-aos="fade-right" class="md:order-2">
+                        <img src="images/10.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x450/CCC/999?text=Ames+Textile+10';" alt="Clothing production line" class="rounded-2xl shadow-xl w-full h-auto object-cover">
+                    </div>
+                    <div data-aos="fade-left" class="md:order-1">
+                        <h2 class="text-4xl font-bold mb-4"><span class="gradient-text">Production Management</span></h2>
+                        <p class="text-gray-600 mb-4">We oversee the entire production process, from cutting and sewing to finishing and packaging. Our team works closely with our network of factories to ensure high-quality output, ethical labor practices, and on-time delivery.</p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>Coordination with trusted US-based factories.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>Rigorous quality control at every stage.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i><span>Logistics and delivery management.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Step-by-Step Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 data-aos="fade-up" class="text-4xl font-bold mb-2"><span class="gradient-text">Our Process</span></h2>
+                    <p data-aos="fade-up" data-aos-delay="100" class="text-lg text-gray-600">A streamlined workflow for a seamless experience.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div data-aos="fade-up" class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="mb-4 inline-block bg-purple-100 text-purple-600 rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold">1</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">You Request...</h3>
+                        <p class="text-gray-600">Send us your project request and technical sheets or product references.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div data-aos="fade-up" data-aos-delay="200" class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="mb-4 inline-block bg-orange-100 text-orange-600 rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold">2</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">We Analyze...</h3>
+                        <p class="text-gray-600">Our team analyzes your project and provides a detailed proposal and timeline.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div data-aos="fade-up" data-aos-delay="400" class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="mb-4 inline-block bg-green-100 text-green-600 rounded-full h-16 w-16 flex items-center justify-center text-2xl font-bold">3</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Let's Go!</h3>
+                        <p class="text-gray-600">Once aligned, we begin working together on your textile collection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="col-span-1">
+                    <h3 class="text-2xl font-bold mb-4">Ames Textile Inc.</h3>
+                    <p class="text-gray-400">200 Industrial Dr NE,<br>Christiansburg, VA 24073<br>(540) 382-8522</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay up to date with our latest news.</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" placeholder="Your Email" class="w-full bg-gray-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <button type="submit" class="btn-gradient text-white font-semibold px-4 py-2 rounded-r-md"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500">
+                &copy; 2024 Ames Textile Inc. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Ames Textile Inc.</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #8A2BE2, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn-gradient {
+             background: linear-gradient(90deg, #8A2BE2, #FF8C00);
+             transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+        }
+
+        .header {
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .page-hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Portfolio Filter Styles */
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        .filter-btn.active {
+            background-color: #8A2BE2; /* Purple */
+            color: white;
+            box-shadow: 0 4px 14px rgba(138, 43, 226, 0.3);
+        }
+
+        /* Portfolio Item Animation */
+        .portfolio-item {
+            transition: transform 0.3s, opacity 0.3s;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header -->
+    <header id="header" class="header fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Ames Textile Inc.</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="about.html" class="text-gray-600 hover:text-purple-600 transition">About</a>
+                <a href="services.html" class="text-gray-600 hover:text-purple-600 transition">Services</a>
+                <a href="portfolio.html" class="text-purple-600 font-semibold transition">Portfolio</a>
+                <a href="sustainability.html" class="text-gray-600 hover:text-purple-600 transition">Sustainability</a>
+                
+            </nav>
+            <a href="#" class="hidden md:block btn-gradient text-white font-semibold px-6 py-3 rounded-lg shadow-md">
+                Create My Collection
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4 border-t border-gray-200">
+             <a href="about.html" class="block py-2 text-gray-600 hover:text-purple-600">About</a>
+             <a href="services.html" class="block py-2 text-gray-600 hover:text-purple-600">Services</a>
+             <a href="portfolio.html" class="block py-2 text-purple-600 font-semibold">Portfolio</a>
+             <a href="sustainability.html" class="block py-2 text-gray-600 hover:text-purple-600">Sustainability</a>
+             
+             <a href="#" class="mt-4 block btn-gradient text-white font-semibold px-6 py-3 rounded-lg shadow-md text-center">Create My Collection</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero bg-gray-50" style="background-image: url('images/11.jpg');">
+             <div class="absolute inset-0 bg-black/50"></div>
+            <div class="container mx-auto px-6 text-center relative">
+                <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-extrabold text-white">Our Work</h1>
+                <p data-aos="fade-up" data-aos-delay="100" class="text-lg md:text-xl text-white mt-4 max-w-3xl mx-auto">Explore our expertise across various apparel categories we've helped bring to life.</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <!-- Filter Buttons -->
+                <div data-aos="fade-up" class="flex flex-wrap justify-center gap-3 md:gap-4 mb-12" id="filter-buttons">
+                    <button class="filter-btn active bg-gray-200 text-gray-800 font-semibold px-5 py-2 rounded-full" data-filter="all">All</button>
+                    <button class="filter-btn bg-gray-200 text-gray-800 font-semibold px-5 py-2 rounded-full" data-filter="hoodies">Hoodies & Sweatshirts</button>
+                    <button class="filter-btn bg-gray-200 text-gray-800 font-semibold px-5 py-2 rounded-full" data-filter="tshirts">T-Shirts</button>
+                    <button class="filter-btn bg-gray-200 text-gray-800 font-semibold px-5 py-2 rounded-full" data-filter="jackets">Jackets</button>
+                    <button class="filter-btn bg-gray-200 text-gray-800 font-semibold px-5 py-2 rounded-full" data-filter="pants">Pants & Shorts</button>
+                </div>
+
+                <!-- Portfolio Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                    <!-- Item 1 -->
+                    <div class="portfolio-item group" data-category="jackets">
+                        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                            <img src="images/12.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/E0E0E0/B0B0B0?text=Jacket';" alt="Stylish Jacket" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold text-gray-800">Windbreaker Jacket</h3>
+                                <p class="text-gray-500">Outerwear</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="portfolio-item group" data-category="hoodies">
+                         <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                            <img src="images/13.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/DDE/AAA?text=Hoodie';" alt="Cream Hoodie" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold text-gray-800">Classic Cream Hoodie</h3>
+                                <p class="text-gray-500">Knitwear</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="portfolio-item group" data-category="pants">
+                         <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                            <img src="images/14.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/DDD/BBB?text=Pants';" alt="Gray Sweatpants" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold text-gray-800">Fleece Sweatpants</h3>
+                                <p class="text-gray-500">Loungewear</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="portfolio-item group" data-category="tshirts">
+                         <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                            <img src="images/15.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/EEE/CCC?text=T-Shirt';" alt="White T-Shirt" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold text-gray-800">Heavyweight T-Shirt</h3>
+                                <p class="text-gray-500">Basics</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                     <div class="portfolio-item group" data-category="hoodies">
+                         <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                            <img src="images/16.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/DDE/AAA?text=Hoodie+2';" alt="Graphic Hoodie" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold text-gray-800">Graphic Print Hoodie</h3>
+                                <p class="text-gray-500">Streetwear</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="portfolio-item group" data-category="jackets">
+                         <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                            <img src="images/17.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x500/E0E0E0/B0B0B0?text=Jacket+2';" alt="Denim Jacket" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6 bg-white">
+                                <h3 class="text-xl font-bold text-gray-800">Classic Denim Jacket</h3>
+                                <p class="text-gray-500">Outerwear</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                 <div class="bg-gray-800 rounded-2xl p-12 shadow-2xl" style="background-image: linear-gradient(rgba(31, 41, 55, 0.8), rgba(31, 41, 55, 0.8)), url('images/8.jpg'); background-size:cover; background-position: center;">
+                    <h2 data-aos="fade-up" class="text-4xl font-bold text-white mb-4">Ready to create your collection?</h2>
+                    <p data-aos="fade-up" data-aos-delay="100" class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Let our expertise and passion for quality bring your vision to life. Contact us today to get started.</p>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <a href="#" class="btn-gradient text-white font-semibold px-8 py-4 rounded-lg shadow-lg text-lg">Start Your Project</a>
+                    </div>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="col-span-1">
+                    <h3 class="text-2xl font-bold mb-4">Ames Textile Inc.</h3>
+                    <p class="text-gray-400">200 Industrial Dr NE,<br>Christiansburg, VA 24073<br>(540) 382-8522</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay up to date with our latest news.</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" placeholder="Your Email" class="w-full bg-gray-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <button type="submit" class="btn-gradient text-white font-semibold px-4 py-2 rounded-r-md"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500">
+                &copy; 2024 Ames Textile Inc. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio Filter Logic
+        const filterButtonsContainer = document.getElementById('filter-buttons');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtonsContainer.addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                // Update active button
+                const currentActive = filterButtonsContainer.querySelector('.active');
+                currentActive.classList.remove('active');
+                e.target.classList.add('active');
+
+                const filterValue = e.target.getAttribute('data-filter');
+
+                // Filter portfolio items
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+        });
+
+    </script>
+</body>
+</html>
